@@ -1,8 +1,13 @@
 body {
   text-align: center;
+  align-items: center;
   background-color: #283149;
 }
-
+html{
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+}
 h1 {
   font-size: 5rem;
   color: #DBEDF3;
