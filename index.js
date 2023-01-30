@@ -7,14 +7,18 @@ drums.forEach((drum) => {
     })
 })
 
+// klaviatura orqali ishlashi
 document.body.addEventListener("keypress", (e) => {
-    playAudio(e.key)
-    
-    
-    
+    drums.forEach((drum) => {
+        if(drum.textContent == e.key) {
+            animate(drum);
+        }
+    })
+    playAudio(e.key)   
 })
 
 
+// Audio 
 function playAudio(id) {
     let sound;
     switch(id){
@@ -43,6 +47,8 @@ function playAudio(id) {
     sound.play();
 }
 
+
+// Animation
 function animate(item) {
     item.classList.add("pressed")
        setTimeout(() => {
